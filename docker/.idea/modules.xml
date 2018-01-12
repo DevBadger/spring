@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/config.iml" filepath="$PROJECT_DIR$/.idea/modules/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../config-properties/config-properties.iml" filepath="$PROJECT_DIR$/../../config-properties/config-properties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config_main.iml" filepath="$PROJECT_DIR$/.idea/modules/config_main.iml" group="config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config_test.iml" filepath="$PROJECT_DIR$/.idea/modules/config_test.iml" group="config" />
       <module fileurl="file://$PROJECT_DIR$/.idea/docker.iml" filepath="$PROJECT_DIR$/.idea/docker.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka_main.iml" group="eureka" />
