@@ -10,7 +10,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 VOLUME /tmp
 
-ADD target/flex-config-1.0.0-SNAPSHOT.jar app.jar
+ADD target/config-1.0.0-SNAPSHOT.jar app.jar
 
 ENV JAVA_OPTS=""
 
