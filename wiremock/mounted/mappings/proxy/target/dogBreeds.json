@@ -1,0 +1,8 @@
+{
+  "request": {
+    "urlPattern": "/dog.ceo/.*"
+  },
+  "response": {
+    "proxyBaseUrl" : "https://dog.ceo/api/"
+  }
+}
