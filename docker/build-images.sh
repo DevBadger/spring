@@ -6,4 +6,4 @@ PWD=pwd
 MAX_RETRIES=3
 
 #build eureka
-cd /Users/z002ngh/Projects/devBadger/spring/eureka/ && ./gradlew clean build
+cd /Users/z002ngh/Projects/devBadger/spring/eureka/ && ./gradlew clean build image jacocoTestReport

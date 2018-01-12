@@ -46,6 +46,18 @@ dependencyManagement {
 	}
 }
 
+task image(type: Docker, dependsOn: build ) {
+	applicationName = jar.baseName
+	dockerfile = file('Dockerfile')
+	doFirst {
+		copy {
+			from jar
+			into "${stageDir}/target"
+
+		}
+	}
+}
+
 task publishImage(type: Docker, dependsOn: build ) {
 	applicationName = jar.baseName
 	push = true
