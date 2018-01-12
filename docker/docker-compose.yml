@@ -1,0 +1,74 @@
+version: '3'
+
+networks:
+    dockercomposefiles_consensus-network:
+     external: true
+
+services:
+
+  eureka:
+    image: com.devbadger/eureka:1.0.0-SNAPSHOT
+    environment:
+      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12555
+    ports:
+      - 11555:11555
+      - 12555:12555
+    networks:
+      - dockercomposefiles_devbadger-network
+
+  config:
+    image: com.devbadger/config:1.0.0-SNAPSHOT
+    environment:
+      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12554
+    ports:
+      - 11554:11554
+      - 12554:12554
+    volumes:
+      - /Users/$USER/.ssh/id_rsa:/root/.ssh/id_rsa
+      - /Users/$USER/.ssh/known_hosts:/root/.ssh/known_hosts
+    networks:
+      - dockercomposefiles_devbadger-network
+
+#  security:
+#    image: com.devbadger/security:1.0.0-SNAPSHOT
+#    environment:
+#      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12551
+#    ports:
+#      - 11551:11551
+#      - 12551:12551
+#    networks:
+#      - dockercomposefiles_devbadger-network
+#
+#  gateway:
+#    image: com.devbadger/gateway:1.0.0-SNAPSHOT
+#    environment:
+#      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12552
+#    ports:
+#      - 11552:11552
+#      - 12552:12552
+#    networks:
+#      - dockercomposefiles_devbadger-network
+#
+#  service:
+#    image: com.devbadger/service:1.0.0-SNAPSHOT
+#    environment:
+#      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12553
+#      - VIRTUAL_HOST=*/flex-service/*,https://*/flex-service/*
+#    ports:
+#      - 11553:11553
+#      - 12553:12553
+#    expose:
+#      - 11553
+#    networks:
+#      - dockercomposefiles_devbadger-network
+#
+#  ui:
+#    image: com.devbadger/ui:1.0.0-SNAPSHOT
+#    environment:
+#      - VIRTUAL_HOST=*:80,https://*
+#    ports:
+#      - 8443:80
+#    expose:
+#      - 80
+#    networks:
+#      - dockercomposefiles_devbadger-network
