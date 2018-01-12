@@ -1,10 +1,20 @@
 version: '3'
 
 networks:
-    dockercomposefiles_consensus-network:
+    dockercomposefiles_devbadger-network:
      external: true
 
 services:
+
+  wiremock-server:
+    image: com.devbadger/wiremock:1.0.0-SNAPSHOT
+    ports:
+      - 14551:14551
+    networks:
+      - dockercomposefiles_devbadger-network
+    volumes:
+      - ./wiremock/mounted/mappings:/app/mappings
+      - ./wiremock/mounted/logs:/app/logs
 
   eureka:
     image: com.devbadger/eureka:1.0.0-SNAPSHOT
