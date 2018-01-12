@@ -1,0 +1,26 @@
+server:
+  port: 11554
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@ghe.consensuscorpdev.com:ConsensusCorp/flex-config-properties.git
+          searchPaths:
+            - 'gateway'
+            - 'service'
+            - 'security'
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery:11555/eureka/
+    register-with-eureka: true
+    fetch-registry: false
+  instance:
+    instance-id: ${spring.application.name}_${random.int}:${server.port}
+    preferIpAddress: false
+    hostname: config
