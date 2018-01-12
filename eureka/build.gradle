@@ -7,15 +7,18 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath('se.transmode.gradle:gradle-docker:1.2')
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'docker'
+apply plugin: 'jacoco'
 
 group = 'com.devbadger'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
@@ -27,6 +30,10 @@ ext {
 	springCloudVersion = 'Edgware.RELEASE'
 }
 
+jar {
+	baseName = 'eureka'
+}
+
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
@@ -36,5 +43,26 @@ dependencies {
 dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+task publishImage(type: Docker, dependsOn: build ) {
+	applicationName = jar.baseName
+	push = true
+	dockerfile = file('Dockerfile')
+	doFirst {
+		copy {
+			from jar
+			into "${stageDir}/target"
+
+		}
+	}
+}
+
+jacocoTestReport {
+	reports {
+		xml.enabled false
+		csv.enabled false
+		html.destination file("${buildDir}/jacocoHtml")
 	}
 }
