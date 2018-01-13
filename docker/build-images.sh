@@ -14,5 +14,8 @@ cd /Users/z002ngh/Projects/devBadger/spring/eureka/ && ./gradlew clean build ima
 #build config
 cd /Users/z002ngh/Projects/devBadger/spring/config/ && ./gradlew clean build image jacocoTestReport
 
+#build zuul
+cd /Users/z002ngh/Projects/devBadger/spring/zuul/ && ./gradlew clean build image jacocoTestReport
+
 #build security
 #cd /Users/z002ngh/Projects/devBadger/spring/security/ && ./gradlew clean build image jacocoTestReport

@@ -11,6 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka_main.iml" group="eureka" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka_test.iml" group="eureka" />
       <module fileurl="file://$PROJECT_DIR$/../wiremock/wiremock.iml" filepath="$PROJECT_DIR$/../wiremock/wiremock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul_main.iml" group="zuul" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul_test.iml" group="zuul" />
     </modules>
   </component>
 </project>
