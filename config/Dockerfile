@@ -14,4 +14,4 @@ ADD target/config-1.0.0-SNAPSHOT.jar app.jar
 
 ENV JAVA_OPTS=""
 
-ENTRYPOINT dockerize -wait tcp://eureka:11555 -timeout ${TIMEOUT:-240s} && exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+ENTRYPOINT dockerize -wait tcp://eureka:8080 -timeout ${TIMEOUT:-240s} && exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar

@@ -21,8 +21,8 @@ services:
     environment:
       - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8001
     ports:
-      - 11555:8080
-      - 12555:8001
+      - 11557:8080
+      - 12557:8001
     networks:
       - dockercomposefiles_devbadger-network
 
@@ -31,8 +31,8 @@ services:
     environment:
       - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8001
     ports:
-      - 11554:8080
-      - 12554:8001
+      - 11556:8080
+      - 12556:8001
     volumes:
       - /Users/$USER/.ssh/id_rsa:/root/.ssh/id_rsa
       - /Users/$USER/.ssh/known_hosts:/root/.ssh/known_hosts
@@ -54,8 +54,8 @@ services:
 #    environment:
 #      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12551
 #    ports:
-#      - 11551:11551
-#      - 12551:12551
+#      - 11553:8080
+#      - 12553:8001
 #    networks:
 #      - dockercomposefiles_devbadger-network
 #
@@ -64,8 +64,8 @@ services:
 #    environment:
 #      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12552
 #    ports:
-#      - 11552:11552
-#      - 12552:12552
+#      - 11552:8080
+#      - 12552:8001
 #    networks:
 #      - dockercomposefiles_devbadger-network
 #
@@ -75,20 +75,7 @@ services:
 #      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12553
 #      - VIRTUAL_HOST=*/flex-service/*,https://*/flex-service/*
 #    ports:
-#      - 11553:11553
-#      - 12553:12553
-#    expose:
-#      - 11553
-#    networks:
-#      - dockercomposefiles_devbadger-network
-#
-#  ui:
-#    image: com.devbadger/ui:1.0.0-SNAPSHOT
-#    environment:
-#      - VIRTUAL_HOST=*:80,https://*
-#    ports:
-#      - 8443:80
-#    expose:
-#      - 80
+#      - 11551:8080
+#      - 12551:8001
 #    networks:
 #      - dockercomposefiles_devbadger-network
