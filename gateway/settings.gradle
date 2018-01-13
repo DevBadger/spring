@@ -1,0 +1,5 @@
+rootProject.name = 'gateway'
+include 'gateway-app'
+include 'gateway-icndb-model'
+include 'gateway-icndb-service'
+

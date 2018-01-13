@@ -1,0 +1,13 @@
+dependencies {
+    compile project(':gateway-icndb-model')
+
+    compile libs.aspectj
+    compile libs.guava
+    compile libs.groovy
+    compile rest_client.feign
+    compile rest_client.feign_jackson
+
+    testCompile libs.junit
+    testCompile libs.spock
+    testCompile libs.springTest
+}

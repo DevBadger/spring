@@ -1,0 +1,112 @@
+import org.springframework.cloud.contract.verifier.config.TestFramework
+import org.springframework.cloud.contract.verifier.config.TestMode
+
+buildscript {
+	ext {
+		springBootVersion = '1.5.9.RELEASE'
+		springCloudContractVersion = '1.2.1.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+		mavenLocal()
+	}
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+		classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:${springCloudContractVersion}"
+		classpath 'se.transmode.gradle:gradle-docker:1.2'
+		classpath 'io.spring.gradle:dependency-management-plugin:0.5.2.RELEASE'
+		classpath "com.jayway.restassured:rest-assured:2.5.0"
+		classpath "com.jayway.restassured:spring-mock-mvc:2.5.0"
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'docker'
+apply plugin: 'groovy'
+apply plugin: 'spring-cloud-contract'
+apply plugin: 'maven-publish'
+apply plugin: "io.spring.dependency-management"
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+ext {
+	springCloudVersion = 'Edgware.RELEASE'
+}
+
+jar {
+	baseName = 'gateway'
+}
+
+configurations {
+	providedRuntime
+}
+
+dependencies {
+	compile project(':gateway-icndb-service')
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework.boot:spring-boot-starter-web-services'
+	compile "org.springframework.boot:spring-boot-starter-tomcat"
+	compile 'org.springframework.cloud:spring-cloud-starter-config'
+	compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+	compile "org.springframework.boot:spring-boot-starter-actuator"
+	compile 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
+//	compile 'com.devbadger:security-authorization:1.0.0-SNAPSHOT'
+	compile libs.groovy
+	compile libs.jacksonJdk8
+	compile libs.jacksonGuava
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile libs.spock
+	testCompile libs.junit
+	testCompile libs.springTest
+
+	//spring cloud contract dependencies
+	testCompile "com.jayway.restassured:rest-assured:2.5.0"
+	testCompile "com.jayway.restassured:spring-mock-mvc:2.5.0"
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+contracts{
+	targetFramework = TestFramework.SPOCK
+	testMode = TestMode.MOCKMVC
+	generatedTestSourcesDir = project.file("${project.rootDir}/flex-gateway-app/src/test/groovy")
+	contractsDslDir = project.file("${project.rootDir}/flex-gateway-app/src/test/resources/contracts")
+	basePackageForTests = 'com.consensus.flex.gateway.app'
+	packageWithBaseClasses = 'com.consensus.flex.gateway.app.base'
+}
+
+
+task image(type: Docker, dependsOn: build ) {
+	applicationName = jar.baseName
+	dockerfile = file('Dockerfile')
+	doFirst {
+		copy {
+			from jar
+			into "${stageDir}/target"
+
+		}
+	}
+}
+
+task publishImage(type: Docker, dependsOn: build ) {
+	applicationName = jar.baseName
+	push = true
+	dockerfile = file('Dockerfile')
+	doFirst {
+		copy {
+			from jar
+			into "${stageDir}/target"
+
+		}
+	}
+}
