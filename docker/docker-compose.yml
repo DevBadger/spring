@@ -44,8 +44,8 @@ services:
     environment:
       - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8001
     ports:
-      - 11554:8080
-      - 12554:8001
+      - 8443:8080
+      - 12550:8001
     networks:
       - dockercomposefiles_devbadger-network
 
