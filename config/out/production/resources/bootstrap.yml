@@ -1,5 +1,5 @@
 server:
-  port: 11554
+  port: 11556
 
 spring:
   application:
@@ -13,15 +13,15 @@ spring:
             - 'gateway'
             - 'service'
             - 'security'
-            - 'ui'
+            - 'zuul'
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:11555/eureka/
+      defaultZone: http://localhost:11557/eureka/
     register-with-eureka: true
     fetch-registry: false
   instance:
+    hostname: ${spring.application.name}
     instance-id: ${spring.application.name}_${random.int}:${server.port}
     preferIpAddress: false
-    hostname: config
