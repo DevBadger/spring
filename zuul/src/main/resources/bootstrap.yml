@@ -4,14 +4,3 @@ spring:
   cloud:
     config:
       uri: http://config:8080/
-
-security:
-  basic:
-    enabled: false
-  sessions: NEVER
-
-zuul:
-  routes:
-    service:
-      sensitiveHeaders:
-      url: http://service:8080/service
