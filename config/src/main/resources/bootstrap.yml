@@ -13,7 +13,7 @@ spring:
             - 'gateway'
             - 'service'
             - 'security'
-            - 'ui'
+            - 'zuul'
 
 eureka:
   client:
