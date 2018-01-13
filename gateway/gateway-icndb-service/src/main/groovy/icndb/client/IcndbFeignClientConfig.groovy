@@ -1,4 +1,4 @@
-package icndb;
+package icndb.client;
 
 import feign.Logger
 import feign.codec.Decoder

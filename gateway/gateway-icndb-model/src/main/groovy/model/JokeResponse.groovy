@@ -9,17 +9,25 @@ import org.pojomatic.annotations.AutoProperty
 @AutoProperty
 @JsonDeserialize(builder = Builder.class)
 class JokeResponse extends Model{
-    private final long jokeId
-    private final String jokeStr
+    private final String type
+    private final Collection<Joke> value
 
     JokeResponse(final Builder builder) {
-        this.jokeId = builder.jokeId
-        this.jokeStr = builder.jokeStr
+        this.type = builder.type
+        this.value = builder.value
+    }
+
+    String getType() {
+        return type
+    }
+
+    Collection<Joke> getValue() {
+        return value
     }
 
     static class Builder {
-        long jokeId
-        String jokeStr
+        String type
+        Collection<Joke> value
 
         JokeResponse build(){ new JokeResponse(this) }
     }
