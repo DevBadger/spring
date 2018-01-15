@@ -32,7 +32,7 @@ class JokesBase extends Specification{
 //        icndbService.getJoke(1) >> Optional.of(joke1)
 //        icndbService.getRandomJokes(2) >> Optional.of([joke1,joke2] as Collection<Joke>)
         icndbService.jokeCategories >> ["explicit","nerdy"]
-//        icndbService.jokeCount >> 558
+        icndbService.jokeCount >> (558 as Integer)
 
         RestAssuredMockMvc.standaloneSetup(icndbController)
     }

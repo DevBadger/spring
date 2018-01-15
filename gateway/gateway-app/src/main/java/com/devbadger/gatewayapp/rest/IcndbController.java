@@ -57,7 +57,8 @@ public class IcndbController {
 
     @RequestMapping("jokes/count")
     public ResponseEntity<Integer> getJokeCount(){
-        return ResponseEntity.ok(icndbService.getJokeCount());
+        Integer count = icndbService.getJokeCount();
+        return ResponseEntity.ok(count);
     }
 
     @RequestMapping("categories")
