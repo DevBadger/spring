@@ -26,27 +26,22 @@ public class GenericResponse {
     private final Object value;
 
     public static class Builder {
-        public GenericResponse build() {
-            return new GenericResponse(this);
-        }
-
-        public String getType() {
-            return type;
-        }
-
-        public void setType(String type) {
-            this.type = type;
-        }
-
-        public Object getValue() {
-            return value;
-        }
-
-        public void setValue(Object value) {
-            this.value = value;
-        }
-
         private String type;
         private Object value;
+
+        public String getType() { return type; }
+        public Object getValue() { return value; }
+
+        public Builder setValue(Object value) {
+            this.value = value;
+            return this;
+        }
+
+        public Builder setType(String type) {
+            this.type = type;
+            return this;
+        }
+
+        public GenericResponse build() { return new GenericResponse(this); }
     }
 }

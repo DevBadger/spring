@@ -26,27 +26,27 @@ public class SingleJokeResponse extends Model {
     private final Joke value;
 
     public static class Builder {
-        public SingleJokeResponse build() {
-            return new SingleJokeResponse(this);
-        }
+        private String type;
+        private Joke value;
 
         public String getType() {
             return type;
         }
-
-        public void setType(String type) {
-            this.type = type;
-        }
-
         public Joke getValue() {
             return value;
         }
 
-        public void setValue(Joke value) {
+        public Builder setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public Builder setValue(Joke value) {
             this.value = value;
+            return this;
         }
 
-        private String type;
-        private Joke value;
+        public SingleJokeResponse build() {
+            return new SingleJokeResponse(this);
+        }
     }
 }

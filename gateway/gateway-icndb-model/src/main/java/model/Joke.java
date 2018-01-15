@@ -34,36 +34,33 @@ public class Joke extends Model {
     private final Collection<String> categories;
 
     public static class Builder {
-        public Joke build() {
-            return new Joke(this);
-        }
+        private long id;
+        private String joke;
+        private Collection<String> categories;
 
         public long getId() {
             return id;
         }
+        public String getJoke() { return joke; }
+        public Collection<String> getCategories() { return categories; }
 
-        public void setId(long id) {
+        public Builder setId(long id) {
             this.id = id;
+            return this;
         }
 
-        public String getJoke() {
-            return joke;
-        }
-
-        public void setJoke(String joke) {
+        public Builder setJoke(String joke) {
             this.joke = joke;
+            return this;
         }
 
-        public Collection<String> getCategories() {
-            return categories;
-        }
-
-        public void setCategories(Collection<String> categories) {
+        public Builder setCategories(Collection<String> categories) {
             this.categories = categories;
+            return this;
         }
 
-        private long id;
-        private String joke;
-        private Collection<String> categories;
+        public Joke build() {
+            return new Joke(this);
+        }
     }
 }

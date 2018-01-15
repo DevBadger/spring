@@ -10,7 +10,7 @@ import java.util.Collection;
  */
 @AutoProperty
 @JsonDeserialize(builder = MultiJokeResponse.Builder.class)
-public class MultiJokeResponse {
+public class MultiJokeResponse extends Model{
     public MultiJokeResponse(final Builder builder) {
         this.type = builder.getType();
         this.value = builder.getValue();
@@ -28,27 +28,27 @@ public class MultiJokeResponse {
     private final Collection<Joke> value;
 
     public static class Builder {
-        public MultiJokeResponse build() {
-            return new MultiJokeResponse(this);
-        }
+        private String type;
+        private Collection<Joke> value;
 
         public String getType() {
             return type;
         }
-
-        public void setType(String type) {
-            this.type = type;
-        }
-
         public Collection<Joke> getValue() {
             return value;
         }
 
-        public void setValue(Collection<Joke> value) {
+        public Builder setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public Builder setValue(Collection<Joke> value) {
             this.value = value;
+            return this;
         }
 
-        private String type;
-        private Collection<Joke> value;
+        public MultiJokeResponse build() {
+            return new MultiJokeResponse(this);
+        }
     }
 }
