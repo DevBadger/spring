@@ -7,17 +7,16 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 
 @EnableAutoConfiguration
 @Configuration
 @EnableEurekaClient
 @SpringBootApplication
-@EnableFeignClients
-@ComponentScan
-public class GatewayAppApplication {
+@EnableFeignClients(basePackages = {"com.devbadger"})
+@ComponentScan({ "com.devbadger"})
+public class GatewayApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GatewayAppApplication.class, args);
+		SpringApplication.run(GatewayApp.class, args);
 	}
 }
