@@ -79,10 +79,10 @@ dependencyManagement {
 contracts{
 	targetFramework = TestFramework.SPOCK
 	testMode = TestMode.MOCKMVC
-	generatedTestSourcesDir = project.file("${project.rootDir}/flex-gateway-app/src/test/groovy")
-	contractsDslDir = project.file("${project.rootDir}/flex-gateway-app/src/test/resources/contracts")
-	basePackageForTests = 'com.consensus.flex.gateway.app'
-	packageWithBaseClasses = 'com.consensus.flex.gateway.app.base'
+	generatedTestSourcesDir = project.file("${project.rootDir}/gateway-app/src/test/groovy")
+	contractsDslDir = project.file("${project.rootDir}/gateway-app/src/test/resources/contracts")
+	basePackageForTests = 'com.devbadger.gatewayapp.contract'
+	packageWithBaseClasses = 'com.devbadger.gatewayapp.contract.base'
 }
 
 
