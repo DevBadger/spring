@@ -1,13 +1,11 @@
 package com.devbadger.icndb.client;
 
+import model.GenericResponse;
 import model.MultiJokeResponse;
 import model.SingleJokeResponse;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.Collection;
 
 /**
  * Created by Badger on 1/12/18.
@@ -38,15 +36,15 @@ public interface IcndbFeignClient {
             @RequestParam("limit") final Integer limit
     );
 
-//    /**
-//     * @return available joke categories as Collection of Strings
-//     */
-//    @GetMapping("/categories")
-//    Collection<String> getJokeCategories();
-//
-//    /**
-//     * @return number of available jokes
-//     */
-//    @GetMapping("/jokes/count")
-//    int getJokeCount();
+    /**
+     * @return available joke categories as Collection of Strings
+     */
+    @GetMapping("/categories")
+    GenericResponse getJokeCategories();
+
+    /**
+     * @return number of available jokes
+     */
+    @GetMapping("/jokes/count")
+    GenericResponse getJokeCount();
 }

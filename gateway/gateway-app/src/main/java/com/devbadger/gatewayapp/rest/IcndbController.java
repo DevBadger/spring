@@ -2,11 +2,11 @@ package com.devbadger.gatewayapp.rest;
 
 import com.devbadger.icndb.service.IcndbService;
 import model.Joke;
-import model.MultiJokeResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -53,5 +53,15 @@ public class IcndbController {
     ){
         Collection<Joke> jokes = icndbService.getRandomJokes(count);
         return ResponseEntity.ok(jokes);
+    }
+
+    @RequestMapping("jokes/count")
+    public int getJokeCount(){
+        return icndbService.getJokeCount();
+    }
+
+    @RequestMapping("categories")
+    public Collection<String> getJokeCategories(){
+        return icndbService.getJokeCategories();
     }
 }

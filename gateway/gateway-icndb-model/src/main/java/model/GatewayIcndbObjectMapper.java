@@ -20,6 +20,7 @@ public class GatewayIcndbObjectMapper extends ObjectMapper {
         setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.NONE);
         setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        registerSubtypes(new NamedType(GenericResponse.class, "jokes"));
         registerSubtypes(new NamedType(SingleJokeResponse.class, "jokes"));
         registerSubtypes(new NamedType(MultiJokeResponse.class, "jokes"));
     }
