@@ -24,9 +24,9 @@ public class IcndbServiceImpl implements IcndbService {
     }
 
     @Override
-    public int getJokeCount() {
+    public Integer getJokeCount() {
         GenericResponse response = icndbFeignClient.getJokeCount();
-        return (int) response.getValue();
+        return (Integer) response.getValue();
     }
 
     @Override

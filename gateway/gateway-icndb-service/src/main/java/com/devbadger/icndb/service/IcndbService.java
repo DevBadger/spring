@@ -12,6 +12,6 @@ public interface IcndbService {
     Optional<Joke> getJoke(Integer id);
     Optional<Joke> getRandomJoke();
     Collection<Joke> getRandomJokes(Integer id);
-    int getJokeCount();
+    Integer getJokeCount();
     Collection<String> getJokeCategories();
 }

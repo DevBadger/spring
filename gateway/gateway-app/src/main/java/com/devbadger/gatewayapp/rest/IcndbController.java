@@ -56,12 +56,12 @@ public class IcndbController {
     }
 
     @RequestMapping("jokes/count")
-    public int getJokeCount(){
-        return icndbService.getJokeCount();
+    public ResponseEntity<Integer> getJokeCount(){
+        return ResponseEntity.ok(icndbService.getJokeCount());
     }
 
     @RequestMapping("categories")
-    public Collection<String> getJokeCategories(){
-        return icndbService.getJokeCategories();
+    public ResponseEntity<Collection<String>> getJokeCategories(){
+        return ResponseEntity.ok(icndbService.getJokeCategories());
     }
 }

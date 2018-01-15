@@ -10,7 +10,7 @@ Contract.make{
 
     request { // (1)
         method ('GET') // (2)
-        urlPath ('/api/v1/categories') // (3)
+        urlPath ('icndb/api/v1/categories') // (3)
     }
 
     response { // (4)
@@ -19,17 +19,16 @@ Contract.make{
             contentType(applicationJsonUtf8()) // (6)
         }
 
-        body([ // (7)
-            type: "success",
-            value:  value(["explicit","nerdy"])
-        ])
+        body('["explicit","nerdy"]')
     }
 
 
 /*
-Generate Unit Test
-==================
+============
+= Commands =
+============
 cd /Users/z002ngh/Projects/devbadger/spring/gateway && ./gradlew generateContractTests
+cd /Users/z002ngh/Projects/devbadger/spring/gateway && ./gradlew generateClientStubs publishToMavenLocal
 
 ================================================================
 = From the Consumer perspective, when requesting health status =

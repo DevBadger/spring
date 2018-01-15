@@ -15,47 +15,24 @@ import spock.lang.Specification
 class JokesBase extends Specification{
     def icndbService = Mock(IcndbService)
     def icndbController = new IcndbController(icndbService)
-    
+
+//    def joke1 = new Joke.Builder()
+//            .setId(1)
+//            .setJoke("Chuck Norris uses ribbed condoms inside out, so he gets the pleasure.")
+//            .setCategories(["explicit"] as Collection<String>)
+//            .build()
+//
+//    def joke2 = new Joke.Builder()
+//            .setId(2)
+//            .setJoke("MacGyver can build an airplane out of gum and paper clips. Chuck Norris can kill him and take it.")
+//            .setCategories([] as Collection<String>)
+//            .build()
+
     def setup(){
-        def categories = ["explicit","nerdy"]
-        def count = 558
-
-        def joke1 = new Joke.Builder()
-                .setId(1)
-                .setJoke("Chuck Norris uses ribbed condoms inside out, so he gets the pleasure.")
-                .setCategories(["explicit"])
-                .build()
-
-        def joke2 = new Joke.Builder()
-                .setId(2)
-                .setJoke("MacGyver can build an airplane out of gum and paper clips. Chuck Norris can kill him and take it.")
-                .setCategories([])
-                .build()
-
-        def singleJokeResponse = new SingleJokeResponse.Builder()
-                .setType("success")
-                .setValue(joke1)
-                .build()
-
-        def multiJokeResponse = new MultiJokeResponse.Builder()
-                .setType("success")
-                .setValue([joke1,joke2])
-                .build()
-
-        def categoryResponse = new GenericResponse.Builder()
-                .setType("success")
-                .setValue(categories)
-                .build()
-
-        def countResponse = new GenericResponse.Builder()
-                .setType("success")
-                .setValue(count)
-                .build()
-
-        icndbService.getJoke(_ as Integer) >> singleJokeResponse
-        icndbService.getRandomJokes(_ as Integer) >> multiJokeResponse
-        icndbService.jokeCategories >> categoryResponse
-        icndbService.jokeCount >> countResponse
+//        icndbService.getJoke(1) >> Optional.of(joke1)
+//        icndbService.getRandomJokes(2) >> Optional.of([joke1,joke2] as Collection<Joke>)
+        icndbService.jokeCategories >> ["explicit","nerdy"]
+//        icndbService.jokeCount >> 558
 
         RestAssuredMockMvc.standaloneSetup(icndbController)
     }
