@@ -22,7 +22,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_test.iml" group="gateway-icndb-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service.iml" filepath="$PROJECT_DIR$/.idea/modules/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-app/service-app.iml" filepath="$PROJECT_DIR$/.idea/modules/service-app/service-app.iml" group="service-app" />
-      <module fileurl="file://$PROJECT_DIR$/../service/service-app.iml" filepath="$PROJECT_DIR$/../service/service-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-app/service-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-app/service-app_main.iml" group="service-app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-app/service-app_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service-app/service-app_test.iml" group="service-app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-common/service-common.iml" filepath="$PROJECT_DIR$/.idea/modules/service-common/service-common.iml" group="service-common" />
