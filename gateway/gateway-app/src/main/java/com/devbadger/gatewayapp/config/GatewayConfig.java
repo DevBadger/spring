@@ -1,4 +1,4 @@
-package com.devbadger.gatewayapp;
+package com.devbadger.gatewayapp.config;
 
 import com.devbadger.icndb.service.IcndbServiceConfig;
 import org.springframework.context.annotation.Configuration;
