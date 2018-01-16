@@ -1,6 +1,5 @@
 package com.devbadger.security.security;
 
-import com.devbadger.security.config.FlexSecurityProperties;
 import com.devbadger.security.exception.SecurityAuthorizationException;
 import com.devbadger.security.service.SecurityValidationService;
 import org.slf4j.Logger;
@@ -15,6 +14,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static com.devbadger.security.config.SecurityProperties.*;
 
 /**
  * @author Robert Volker (robert.volker@consensuscorp.com)
@@ -59,11 +60,11 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
     private String getFlexJWTFromRequest(HttpServletRequest request) {
 
         String token = null;
-        String header = request.getHeader(FlexSecurityProperties.HEADER_AUTHORIZATION);
-        if (header != null && header.startsWith(FlexSecurityProperties.TOKEN_PREFIX)) {
-            token = request.getHeader(FlexSecurityProperties.HEADER_AUTHORIZATION);
+        String header = request.getHeader(HEADER_AUTHORIZATION);
+        if (header != null && header.startsWith(TOKEN_PREFIX)) {
+            token = request.getHeader(HEADER_AUTHORIZATION);
             if (token != null) {
-               token = token.replace(FlexSecurityProperties.TOKEN_PREFIX, "");
+               token = token.replace(TOKEN_PREFIX, "");
             }
         }
         return token;

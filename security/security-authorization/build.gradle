@@ -17,9 +17,8 @@ jar {
     baseName = 'security-authorization'
 }
 
-
 ext {
-    springBootVersion = '1.5.8.RELEASE'
+    springBootVersion = '1.5.9.RELEASE'
 }
 
 dependencies {
