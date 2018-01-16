@@ -1,0 +1,7 @@
+server.port: 13551
+
+spring:
+  application.name: service
+  cloud.config.enabled: false
+
+eureka.client.enabled: false

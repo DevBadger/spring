@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
+        classpath('io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE')
+    }
+}
+
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+
+jar {
+    baseName = 'security-authorization'
+}
+
+
+ext {
+    springBootVersion = '1.5.8.RELEASE'
+}
+
+dependencies {
+    compile project(':security-common')
+
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile('org.springframework.boot:spring-boot-starter-security')
+//    compile('org.springframework.cloud:spring-cloud-starter-eureka')
+//    compile('org.springframework.cloud:spring-cloud-starter-vault-config')
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.security:spring-security-test')
+
+    testCompile('junit:junit:4.12')
+
+    compile('io.jsonwebtoken:jjwt:0.9.0')
+    compile('org.aspectj:aspectjweaver:1.8.13')
+
+    compile test_libs.groovy
+    testCompile test_libs.spock
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-netflix:1.3.5.RELEASE'
+        mavenBom 'org.springframework.cloud:spring-cloud-vault-dependencies:1.0.2.RELEASE'
+    }
+}

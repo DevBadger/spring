@@ -1,0 +1,44 @@
+allprojects  {
+    group = 'com.devbadger'
+    version = '1.0.0-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "maven"
+    apply plugin: "idea"
+    apply plugin: 'groovy'
+    apply plugin: 'jacoco'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+
+        maven { url "https://repo.spring.io/release" }
+        maven { url "https://repo.spring.io/milestone" }
+        maven { url "https://repo.spring.io/snapshot" }
+    }
+
+    jacocoTestReport {
+        reports {
+            xml.enabled false
+            csv.enabled false
+            html.destination file("${buildDir}/jacocoHtml")
+        }
+    }
+}
+
+ext {
+    jwt_libs = [
+            jsonwebtoken    : "io.jsonwebtoken:jjwt:0.9.0'"
+    ]
+
+    test_libs = [
+            groovy      : "org.codehaus.groovy:groovy-all:2.4.10",
+            spock       : "org.spockframework:spock-core:1.1-groovy-2.4"
+    ]
+
+}

@@ -1,0 +1,5 @@
+rootProject.name = 'security'
+include ':security-app'
+include ':security-authorization'
+include ':security-common'
+
