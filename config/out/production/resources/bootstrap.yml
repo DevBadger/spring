@@ -4,24 +4,20 @@ server:
 spring:
   application:
     name: config
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/DevBadger/config-properties.git
-          searchPaths:
-            - 'gateway'
-            - 'service'
-            - 'security'
-            - 'zuul'
+  cloud.config.server.git:
+    uri: https://github.com/DevBadger/config-properties.git
+    searchPaths:
+      - 'gateway'
+      - 'service'
+      - 'security'
+      - 'zuul'
 
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:11557/eureka/
+    service-url.defaultZone: http://localhost:11557/eureka/
     register-with-eureka: true
     fetch-registry: false
   instance:
-    hostname: ${spring.application.name}
+    hostname: http://localhost
     instance-id: ${spring.application.name}_${random.int}:${server.port}
     preferIpAddress: false

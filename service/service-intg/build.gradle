@@ -36,6 +36,11 @@ dependencies {
     testCompile("org.springframework.cloud:spring-cloud-starter-contract-stub-runner:1.2.0.BUILD-SNAPSHOT")
 }
 
+
+task wrapper(type: Wrapper){
+    gradleVersion= '4.2.1'
+}
+
 jacocoTestReport {
     reports {
         xml.enabled false

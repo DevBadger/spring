@@ -17,5 +17,10 @@ cd /Users/z002ngh/Projects/devBadger/spring/config/ && ./gradlew clean build ima
 #build zuul
 cd /Users/z002ngh/Projects/devBadger/spring/zuul/ && ./gradlew clean build image jacocoTestReport
 
+#build gateway
+cd /Users/z002ngh/Projects/devBadger/spring/gateway/gateway-app && ./gradlew generateContractTests
+cd /Users/z002ngh/Projects/devBadger/spring/gateway && ./gradlew clean build install image jacocoTestReport
+cd /Users/z002ngh/Projects/devBadger/spring/gateway/gateway-app && ./gradlew generateClientStubs publishToMavenLocal
+
 #build security
 #cd /Users/z002ngh/Projects/devBadger/spring/security/ && ./gradlew clean build image jacocoTestReport
