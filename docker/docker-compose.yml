@@ -59,23 +59,23 @@ services:
 #    networks:
 #      - dockercomposefiles_devbadger-network
 #
-#  gateway:
-#    image: com.devbadger/gateway:1.0.0-SNAPSHOT
-#    environment:
-#      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12552
-#    ports:
-#      - 11552:8080
-#      - 12552:8001
-#    networks:
-#      - dockercomposefiles_devbadger-network
-#
-#  service:
-#    image: com.devbadger/service:1.0.0-SNAPSHOT
-#    environment:
-#      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12553
-#      - VIRTUAL_HOST=*/flex-service/*,https://*/flex-service/*
-#    ports:
-#      - 11551:8080
-#      - 12551:8001
-#    networks:
-#      - dockercomposefiles_devbadger-network
+  gateway:
+    image: com.devbadger/gateway:1.0.0-SNAPSHOT
+    environment:
+      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12552
+    ports:
+      - 11552:8080
+      - 12552:8001
+    networks:
+      - dockercomposefiles_devbadger-network
+
+  service:
+    image: com.devbadger/service:1.0.0-SNAPSHOT
+    environment:
+      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=12553
+      - VIRTUAL_HOST=*/flex-service/*,https://*/flex-service/*
+    ports:
+      - 11551:8080
+      - 12551:8001
+    networks:
+      - dockercomposefiles_devbadger-network
