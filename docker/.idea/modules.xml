@@ -28,8 +28,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-common/service-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-common/service-common_main.iml" group="service-common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-common/service-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service-common/service-common_test.iml" group="service-common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-intg/service-intg.iml" filepath="$PROJECT_DIR$/.idea/modules/service-intg/service-intg.iml" group="service-intg" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-intg/service-intg_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-intg/service-intg_main.iml" group="service-intg" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-intg/service-intg_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service-intg/service-intg_test.iml" group="service-intg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-intg/service-intg_test~1.iml" filepath="$PROJECT_DIR$/.idea/modules/service-intg/service-intg_test~1.iml" group="service-intg" />
       <module fileurl="file://$PROJECT_DIR$/../wiremock/wiremock.iml" filepath="$PROJECT_DIR$/../wiremock/wiremock.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul_main.iml" group="zuul" />

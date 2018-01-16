@@ -16,7 +16,7 @@ class JokesSpec extends JokesBase {
 
 		when:
 			def response = given().spec(request)
-					.get("icndb/api/v1/categories")
+					.get("/icndb/api/v1/categories")
 
 		then:
 			response.statusCode == 200
@@ -33,7 +33,7 @@ class JokesSpec extends JokesBase {
 
 		when:
 			def response = given().spec(request)
-					.get("icndb/api/v1/jokes/count")
+					.get("/icndb/api/v1/jokes/count")
 
 		then:
 			response.statusCode == 200

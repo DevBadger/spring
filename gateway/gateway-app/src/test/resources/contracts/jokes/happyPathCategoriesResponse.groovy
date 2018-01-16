@@ -10,7 +10,7 @@ Contract.make{
 
     request { // (1)
         method ('GET') // (2)
-        urlPath ('icndb/api/v1/categories') // (3)
+        urlPath ('/icndb/api/v1/categories') // (3)
     }
 
     response { // (4)

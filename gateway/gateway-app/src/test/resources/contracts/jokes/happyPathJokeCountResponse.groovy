@@ -10,7 +10,7 @@ Contract.make{
 
     request { // (1)
         method ('GET') // (2)
-        urlPath ('icndb/api/v1/jokes/count') // (3)
+        urlPath ('/icndb/api/v1/jokes/count') // (3)
     }
 
     response { // (4)
