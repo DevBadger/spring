@@ -3,10 +3,6 @@ package com.devbadger.gatewayapp.contract.base
 import com.devbadger.gatewayapp.rest.IcndbController
 import com.devbadger.icndb.service.IcndbService
 import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc
-import model.GenericResponse
-import model.Joke
-import model.MultiJokeResponse
-import model.SingleJokeResponse
 import spock.lang.Specification
 
 /**

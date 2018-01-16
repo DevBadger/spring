@@ -30,7 +30,6 @@ public class ServiceApp extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication sa = new SpringApplication(ServiceApp.class);
-		sa.setBannerMode(Banner.Mode.OFF);
 		sa.run(args);
 	}
 

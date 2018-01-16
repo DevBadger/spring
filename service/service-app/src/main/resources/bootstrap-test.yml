@@ -1,4 +1,4 @@
-server.port: 13553
+server.port: 13551
 
 spring:
   application.name: service
