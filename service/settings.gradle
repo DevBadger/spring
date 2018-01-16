@@ -1,0 +1,5 @@
+rootProject.name = 'service'
+include ':service-app'
+include 'service-common'
+include 'service-intg'
+

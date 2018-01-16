@@ -20,6 +20,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service.iml" group="gateway-icndb-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_main.iml" group="gateway-icndb-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_test.iml" group="gateway-icndb-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service.iml" filepath="$PROJECT_DIR$/.idea/modules/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../service/service-app.iml" filepath="$PROJECT_DIR$/../service/service-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/../wiremock/wiremock.iml" filepath="$PROJECT_DIR$/../wiremock/wiremock.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul_main.iml" group="zuul" />

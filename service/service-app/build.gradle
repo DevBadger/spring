@@ -1,0 +1,111 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.9.RELEASE'
+	}
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath('se.transmode.gradle:gradle-docker:1.2')
+		classpath('io.spring.gradle:dependency-management-plugin:0.5.2.RELEASE')
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'docker'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'groovy'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+ext {
+	springCloudVersion = 'Dalston.SR4'
+}
+
+jar {
+	baseName = 'service'
+}
+
+bootRepackage {
+	classifier = 'exec'
+}
+
+configurations {
+	providedRuntime
+}
+
+dependencies {
+//	compile project(':service-common')
+//	compile('com.devbadger:gateway-icndb-model:1.0.0-SNAPSHOT')
+//	compile('com.devbadger:security-authorization:1.0.0-SNAPSHOT')
+
+	compile('com.google.guava:guava:23.0')
+	compile('io.github.openfeign:feign-jackson:9.3.1')
+	compile('org.codehaus.groovy:groovy-all:2.4.10')
+	compile('org.flywaydb:flyway-core')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.cloud:spring-cloud-starter-config')
+	compile('org.springframework.cloud:spring-cloud-starter-eureka')
+	compile('org.springframework.cloud:spring-cloud-starter-feign:1.3.5.RELEASE')
+	compile('org.aspectj:aspectjweaver:1.8.13')
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.spockframework:spock-core:1.1-groovy-2.4')
+
+	// optional dependencies for using Spock
+	testCompile('org.hamcrest:hamcrest-core:1.3') // only necessary if Hamcrest matchers are used
+	testRuntime('net.bytebuddy:byte-buddy:1.6.5')        // allows mocking of classes (in addition to interfaces)
+	testRuntime('org.objenesis:objenesis:2.5.1')   // allows mocking of classes without default constructor (together with CGLIB)
+
+	compile "org.slf4j:slf4j-api:1.7.25"
+	compile group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3'
+	testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+task image(type: Docker, dependsOn: bootRepackage ) {
+	applicationName = jar.baseName
+	dockerfile = file('Dockerfile')
+	doFirst {
+		copy {
+			from bootRepackage
+			into "${stageDir}/target"
+
+		}
+	}
+}
+
+task publishImage(type: Docker, dependsOn: build ) {
+	applicationName = jar.baseName
+	push = true
+	dockerfile = file('Dockerfile')
+	doFirst {
+		copy {
+			from bootRepackage
+			into "${stageDir}/target"
+
+		}
+	}
+}
+
+jacocoTestReport {
+	reports {
+		xml.enabled false
+		csv.enabled false
+		html.destination file("${buildDir}/jacocoHtml")
+	}
+}
