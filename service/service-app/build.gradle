@@ -27,7 +27,7 @@ repositories {
 }
 
 ext {
-	springCloudVersion = 'Dalston.SR4'
+	springCloudVersion = 'Edgware.RELEASE'
 }
 
 jar {

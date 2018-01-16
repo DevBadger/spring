@@ -23,6 +23,8 @@ cd /Users/z002ngh/Projects/devBadger/spring/gateway && ./gradlew clean build ins
 cd /Users/z002ngh/Projects/devBadger/spring/gateway/gateway-app && ./gradlew generateClientStubs publishToMavenLocal
 
 #build service
+cd /Users/z002ngh/Projects/devBadger/spring/service/service-app && ./gradlew clean build -x test install
+cd /Users/z002ngh/Projects/devBadger/spring/service/service-common && ./gradlew clean build -x test install
 cd /Users/z002ngh/Projects/devBadger/spring/service && ./gradlew clean build -x test install && ./gradlew build image jacocoTestReport
 
 #build security
