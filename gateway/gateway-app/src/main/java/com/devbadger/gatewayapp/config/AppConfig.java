@@ -9,5 +9,5 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(value = {IcndbServiceConfig.class})
-public class GatewayConfig {
+public class AppConfig {
 }
