@@ -20,7 +20,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service.iml" group="gateway-icndb-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_main.iml" group="gateway-icndb-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_test.iml" group="gateway-icndb-service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security.iml" filepath="$PROJECT_DIR$/.idea/modules/security.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-app/security-app.iml" filepath="$PROJECT_DIR$/.idea/modules/security-app/security-app.iml" group="security-app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-app/security-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/security-app/security-app_main.iml" group="security-app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-app/security-app_test.iml" filepath="$PROJECT_DIR$/.idea/modules/security-app/security-app_test.iml" group="security-app" />

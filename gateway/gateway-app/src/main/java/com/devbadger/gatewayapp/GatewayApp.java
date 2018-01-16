@@ -1,7 +1,6 @@
 package com.devbadger.gatewayapp;
 
 import com.devbadger.gatewayapp.config.AppConfig;
-import com.devbadger.security.config.SecurityAuthorizationConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,8 +15,8 @@ import org.springframework.context.annotation.Import;
 @EnableEurekaClient
 @SpringBootApplication
 @EnableFeignClients(basePackages = {"com.devbadger"})
-@ComponentScan({ "com.devbadger", "com.devbadger.security"})
-@Import(value = {AppConfig.class, SecurityAuthorizationConfig.class})
+@ComponentScan({ "com.devbadger"})
+@Import(value = {AppConfig.class})
 public class GatewayApp {
 
 	public static void main(String[] args) {

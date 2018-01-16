@@ -56,7 +56,6 @@ dependencies {
 	compile 'org.springframework.cloud:spring-cloud-starter-eureka'
 	compile "org.springframework.boot:spring-boot-starter-actuator"
 	compile 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
-	compile 'com.devbadger:security-authorization:1.0.0-SNAPSHOT'
 	compile libs.groovy
 	compile libs.jacksonJdk8
 	compile libs.jacksonGuava
