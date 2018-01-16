@@ -17,7 +17,7 @@ import java.util.Optional;
  */
 @CrossOrigin // Evil solution
 @RestController
-@RequestMapping("api/v1/")
+@RequestMapping("icndb/api/v1/")
 public class JokeController {
 
     private final GatewayService gatewayService;

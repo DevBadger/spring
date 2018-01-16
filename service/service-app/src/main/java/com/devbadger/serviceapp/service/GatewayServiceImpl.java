@@ -2,7 +2,6 @@ package com.devbadger.serviceapp.service;
 
 import com.devbadger.service.common.model.Joke;
 import com.devbadger.serviceapp.client.GatewayClient;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -13,7 +12,6 @@ import java.util.Optional;
 public class GatewayServiceImpl implements GatewayService{
     private final GatewayClient gatewayClient;
 
-    @Autowired
     public GatewayServiceImpl(GatewayClient gatewayClient) {
         this.gatewayClient = gatewayClient;
     }
