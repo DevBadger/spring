@@ -1,16 +1,10 @@
-server:
-  port: 13551
+server.port: 13553
 
 spring:
-  application:
-    name: flex-service
-  cloud:
-    config:
-      enabled: false
+  application.name: service
+  cloud.config.enabled: false
 
-eureka:
-  client:
-    enabled: false
+eureka.client.enabled: false
 
 security:
   jwt:
