@@ -1,6 +1,6 @@
 package com.devbadger.securityapp.security;
 
-import com.consensus.flexsecurity.model.JwtAuthenticationToken;
+import com.devbadger.securityapp.model.JwtAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
@@ -20,10 +20,10 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
     @Override
     public Authentication attemptAuthentication(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws AuthenticationException, IOException, ServletException {
 
-        String header = httpServletRequest.getHeader(com.consensus.flexsecurity.config.FlexSecurityProperties.HEADER_AUTHORIZATION);
+        String header = httpServletRequest.getHeader(com.devbadger.security.config.SecurityProperties.HEADER_AUTHORIZATION);
 
 
-        if (header == null || !header.startsWith(com.consensus.flexsecurity.config.FlexSecurityProperties.TOKEN_PREFIX)) {
+        if (header == null || !header.startsWith(com.devbadger.security.config.SecurityProperties.TOKEN_PREFIX)) {
             throw new RuntimeException("JWT Token is missing");
         }
 

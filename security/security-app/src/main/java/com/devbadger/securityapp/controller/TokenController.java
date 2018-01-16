@@ -1,5 +1,6 @@
 package com.devbadger.securityapp.controller;
 
+import com.devbadger.security.model.User;
 import com.devbadger.securityapp.service.SecurityProviderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,14 +26,14 @@ public class TokenController {
     }
 
     @PostMapping
-    public ResponseEntity<String> generateJWT(@RequestBody final User flexUser) {
+    public ResponseEntity<String> generateJWT(@RequestBody final User user) {
 
-        log.info("module='flex-security-app' endpoint='/token' class='TokenController' method='generateJWT' user='" + flexUser + "'");
+        log.info("module='flex-security-app' endpoint='/token' class='TokenController' method='generateJWT' user='" + user + "'");
 
         ResponseEntity<String> tokenResponse;
 
         try {
-            String jwt = securityService.generateJWT(flexUser);
+            String jwt = securityService.generateJWT(user);
             tokenResponse = new ResponseEntity<>(jwt, HttpStatus.OK);
 
             log.info("module='flex-security-app' token created.");

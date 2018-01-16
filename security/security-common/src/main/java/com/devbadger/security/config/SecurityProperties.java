@@ -1,4 +1,4 @@
-package com.consensus.flexsecurity.config;
+package com.devbadger.security.config;
 
 
 /**

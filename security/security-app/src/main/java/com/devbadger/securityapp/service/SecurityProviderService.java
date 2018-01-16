@@ -1,5 +1,7 @@
 package com.devbadger.securityapp.service;
 
+import com.devbadger.security.model.User;
+
 /**
  * @author Robert Volker (robert.volker@consensuscorp.com)
  * @since 11/8/17.
@@ -8,5 +10,5 @@ package com.devbadger.securityapp.service;
  */
 public interface SecurityProviderService {
 
-    String generateJWT(com.consensus.flexsecurity.model.User flexUser);
+    String generateJWT(User user);
 }

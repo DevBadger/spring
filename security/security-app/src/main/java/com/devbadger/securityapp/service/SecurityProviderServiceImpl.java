@@ -1,5 +1,6 @@
 package com.devbadger.securityapp.service;
 
+import com.devbadger.security.model.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -26,9 +27,9 @@ public class SecurityProviderServiceImpl implements SecurityProviderService {
 
 
     @Override
-    public String generateJWT(com.consensus.flexsecurity.model.User flexUser) {
+    public String generateJWT(User user) {
 
-        Claims claims = createClaim(flexUser);
+        Claims claims = createClaim(user);
 
         return Jwts.builder()
                 .setClaims(claims)
@@ -36,14 +37,14 @@ public class SecurityProviderServiceImpl implements SecurityProviderService {
                 .compact();
     }
 
-    private Claims createClaim(com.consensus.flexsecurity.model.User flexUser){
+    private Claims createClaim(User user){
 
         Claims claims = createPublicClaims();
 
         // Add flex private claims to the jwt
-        claims.put("sessionId", flexUser.getSessionId());
-        claims.put("storeId", flexUser.getStoreId());
-        claims.put("repId",  flexUser.getRepId());
+        claims.put("sessionId", user.getSessionId());
+        claims.put("storeId", user.getStoreId());
+        claims.put("repId",  user.getRepId());
 
         return claims;
     }

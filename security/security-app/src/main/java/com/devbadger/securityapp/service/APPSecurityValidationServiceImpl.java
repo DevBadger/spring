@@ -1,5 +1,6 @@
 package com.devbadger.securityapp.service;
 
+import com.devbadger.security.model.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,7 @@ public class APPSecurityValidationServiceImpl implements APPSecurityValidationSe
         User flexUser = null;
         try {
             Claims claims = Jwts.parser()
-                    .setSigningKey(com.consensus.flexsecurity.config.FlexSecurityProperties.SECRET.getBytes())
+                    .setSigningKey(com.devbadger.security.config.SecurityProperties.SECRET.getBytes())
                     .parseClaimsJws(jwt)
                     .getBody();
 

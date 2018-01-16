@@ -20,6 +20,16 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service.iml" group="gateway-icndb-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_main.iml" group="gateway-icndb-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-icndb-service/gateway-icndb-service_test.iml" group="gateway-icndb-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security.iml" filepath="$PROJECT_DIR$/.idea/modules/security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-app/security-app.iml" filepath="$PROJECT_DIR$/.idea/modules/security-app/security-app.iml" group="security-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-app/security-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/security-app/security-app_main.iml" group="security-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-app/security-app_test.iml" filepath="$PROJECT_DIR$/.idea/modules/security-app/security-app_test.iml" group="security-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-authorization/security-authorization.iml" filepath="$PROJECT_DIR$/.idea/modules/security-authorization/security-authorization.iml" group="security-authorization" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-authorization/security-authorization_main.iml" filepath="$PROJECT_DIR$/.idea/modules/security-authorization/security-authorization_main.iml" group="security-authorization" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-authorization/security-authorization_test.iml" filepath="$PROJECT_DIR$/.idea/modules/security-authorization/security-authorization_test.iml" group="security-authorization" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-common/security-common.iml" filepath="$PROJECT_DIR$/.idea/modules/security-common/security-common.iml" group="security-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-common/security-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/security-common/security-common_main.iml" group="security-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security-common/security-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/security-common/security-common_test.iml" group="security-common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service.iml" filepath="$PROJECT_DIR$/.idea/modules/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-app/service-app.iml" filepath="$PROJECT_DIR$/.idea/modules/service-app/service-app.iml" group="service-app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-app/service-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-app/service-app_main.iml" group="service-app" />

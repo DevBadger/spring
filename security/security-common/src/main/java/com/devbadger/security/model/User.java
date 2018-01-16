@@ -1,4 +1,4 @@
-package com.consensus.flexsecurity.model;
+package com.devbadger.security.model;
 
 public class User {
     private String sessionId;
