@@ -11,6 +11,7 @@ spring:
       - 'service'
       - 'security'
       - 'zuul'
+      - 'gtep-small'
 
 eureka:
   client:
