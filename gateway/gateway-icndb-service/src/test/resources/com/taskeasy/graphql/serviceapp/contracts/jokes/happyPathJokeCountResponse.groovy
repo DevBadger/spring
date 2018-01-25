@@ -1,4 +1,4 @@
-package jokes
+package com.taskeasy.graphql.serviceapp.contracts.jokes
 import org.springframework.cloud.contract.spec.Contract
 
 Contract.make{

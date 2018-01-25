@@ -1,16 +1,16 @@
-package jokes
+package com.taskeasy.graphql.serviceapp.contracts.jokes
 import org.springframework.cloud.contract.spec.Contract
 
 Contract.make{
     description("""
-        Represents the successful joke count retrieve
-        When : When sending request for joke count
-        Then : number of current jokes is retrieved
+        Represents the successful categories retrieve
+        When : When sending request for categories
+        Then : Corresponding a list of categories are retrieved
         """)
 
     request { // (1)
         method ('GET') // (2)
-        urlPath ('/icndb/api/v1/jokes/count') // (3)
+        urlPath ('/icndb/api/v1/categories') // (3)
     }
 
     response { // (4)
@@ -19,14 +19,16 @@ Contract.make{
             contentType(applicationJsonUtf8()) // (6)
         }
 
-        body(558)
+        body('["explicit","nerdy"]')
     }
 
 
 /*
-Generate Unit Test
-==================
+============
+= Commands =
+============
 cd /Users/z002ngh/Projects/devbadger/spring/gateway && ./gradlew generateContractTests
+cd /Users/z002ngh/Projects/devbadger/spring/gateway && ./gradlew generateClientStubs publishToMavenLocal
 
 ================================================================
 = From the Consumer perspective, when requesting health status =

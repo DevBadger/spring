@@ -1,0 +1,27 @@
+allprojects  {
+    group = 'com.devbadger'
+    version = '1.0.0-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    apply plugin: 'jacoco'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+
+        maven { url "https://repo.spring.io/release" }
+        maven { url "https://repo.spring.io/milestone" }
+        maven { url "https://repo.spring.io/snapshot" }
+    }
+
+    ext {
+        libs = [
+                groovy              : 'org.codehaus.groovy:groovy-all:2.4.10'
+        ]
+    }
+}

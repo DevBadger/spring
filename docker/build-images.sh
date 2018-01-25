@@ -14,9 +14,6 @@ cd $PROJDIR/eureka/ && ./gradlew clean build image jacocoTestReport
 #build config
 cd $PROJDIR/config/ && ./gradlew clean build image jacocoTestReport
 
-#build zuul
-cd $PROJDIR/zuul/ && ./gradlew clean build image jacocoTestReport
-
 #build gateway
 cd $PROJDIR/gateway/gateway-icndb-model && ./gradlew clean build install
 cd $PROJDIR/gateway/gateway-icndb-service && ./gradlew clean build install
@@ -28,3 +25,11 @@ cd $PROJDIR/gateway/gateway-app && ./gradlew generateClientStubs publishToMavenL
 cd $PROJDIR/service
 ./gradlew clean build -x test install publishToMavenLocal
 ./gradlew build image jacocoTestReport
+
+#build service
+cd $PROJDIR/service
+./gradlew clean build -x test install publishToMavenLocal
+./gradlew build image jacocoTestReport
+
+#build zuul
+cd $PROJDIR/zuul/ && ./gradlew clean build image jacocoTestReport

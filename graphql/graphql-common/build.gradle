@@ -1,0 +1,5 @@
+dependencies {
+    compile('com.fasterxml.jackson.core:jackson-databind:2.9.1')
+    compile('org.pojomatic:pojomatic:2.0.1')
+    testCompile('junit:junit:4.12')
+}

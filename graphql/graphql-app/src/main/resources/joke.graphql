@@ -1,0 +1,15 @@
+schema {
+    query: Query
+}
+
+type Joke {
+    id: Long
+    joke: String
+    categories: [String]
+}
+
+type Query {
+    allJokes: [Joke]
+    joke(id: Long): Joke
+    randomJoke: Joke
+}
