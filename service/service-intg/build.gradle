@@ -28,7 +28,7 @@ buildscript {
 }
 
 dependencies {
-    compile('com.devbadger:service:1.0.0-SNAPSHOT')
+//    compile(':service-app')
     compile('org.codehaus.groovy:groovy-all:2.4.10')
 
     testCompile('org.spockframework:spock-core:1.1-groovy-2.4')

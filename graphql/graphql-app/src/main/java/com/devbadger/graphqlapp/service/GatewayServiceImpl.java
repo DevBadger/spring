@@ -1,6 +1,6 @@
 package com.devbadger.graphqlapp.service;
 
-import com.taskeasy.graphqlserviceapp.client.GatewayClient;
+import com.devbadger.graphqlapp.client.GatewayClient;
 import model.Joke;
 import org.springframework.beans.factory.annotation.Autowired;
 

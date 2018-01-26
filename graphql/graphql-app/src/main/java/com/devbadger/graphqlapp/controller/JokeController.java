@@ -1,7 +1,7 @@
 package com.devbadger.graphqlapp.controller;
 
 
-import com.taskeasy.graphqlserviceapp.service.GraphQLService;
+import com.devbadger.graphqlapp.service.GraphQLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

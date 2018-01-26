@@ -1,6 +1,6 @@
 package com.devbadger.graphqlapp.datafetcher;
 
-import com.taskeasy.graphqlserviceapp.service.GatewayService;
+import com.devbadger.graphqlapp.service.GatewayService;
 import graphql.schema.DataFetcher;
 import graphql.schema.DataFetchingEnvironment;
 import model.Joke;

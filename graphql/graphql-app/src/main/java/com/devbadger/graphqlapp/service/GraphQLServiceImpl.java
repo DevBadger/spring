@@ -1,5 +1,14 @@
 package com.devbadger.graphqlapp.service;
 
+import com.devbadger.graphqlapp.datafetcher.AllJokesDataFetcher;
+import com.devbadger.graphqlapp.datafetcher.JokeDataFetcher;
+import com.devbadger.graphqlapp.datafetcher.RandomJokeDataFetcher;
+import graphql.GraphQL;
+import graphql.schema.GraphQLSchema;
+import graphql.schema.idl.RuntimeWiring;
+import graphql.schema.idl.SchemaGenerator;
+import graphql.schema.idl.SchemaParser;
+import graphql.schema.idl.TypeDefinitionRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;

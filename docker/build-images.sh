@@ -15,7 +15,7 @@ cd $PROJDIR/eureka/ && ./gradlew clean build image jacocoTestReport
 cd $PROJDIR/config/ && ./gradlew clean build image jacocoTestReport
 
 #build gateway
-cd $PROJDIR/gateway/gateway-icndb-model && ./gradlew clean build install
+cd $PROJDIR/gateway/gateway-icndb-model && ./gradlew clean build install publishToMavenLocal
 cd $PROJDIR/gateway/gateway-icndb-service && ./gradlew clean build install
 cd $PROJDIR/gateway/gateway-app && ./gradlew generateContractTests
 cd $PROJDIR/gateway && ./gradlew clean build install image jacocoTestReport
@@ -27,7 +27,7 @@ cd $PROJDIR/service
 ./gradlew build image jacocoTestReport
 
 #build service
-cd $PROJDIR/service
+cd $PROJDIR/graphql
 ./gradlew clean build -x test install publishToMavenLocal
 ./gradlew build image jacocoTestReport
 

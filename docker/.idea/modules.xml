@@ -28,6 +28,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/graphql-common/graphql-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/graphql-common/graphql-common_main.iml" group="graphql-common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/graphql-common/graphql-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/graphql-common/graphql-common_test.iml" group="graphql-common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/graphql-intg.iml" filepath="$PROJECT_DIR$/.idea/modules/graphql-intg.iml" group="graphql-intg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/graphql-intg/graphql-intg_main.iml" filepath="$PROJECT_DIR$/.idea/modules/graphql-intg/graphql-intg_main.iml" group="graphql-intg" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/graphql-intg/graphql-intg_test.iml" filepath="$PROJECT_DIR$/.idea/modules/graphql-intg/graphql-intg_test.iml" group="graphql-intg" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service.iml" filepath="$PROJECT_DIR$/.idea/modules/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-app/service-app.iml" filepath="$PROJECT_DIR$/.idea/modules/service-app/service-app.iml" group="service-app" />

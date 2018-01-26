@@ -1,14 +1,14 @@
 package com.devbadger.graphqlapp.config;
 
 
-import com.taskeasy.graphqlserviceapp.client.GatewayClient;
-import com.taskeasy.graphqlserviceapp.service.GatewayService;
-import com.taskeasy.graphqlserviceapp.service.GatewayServiceImpl;
-import com.taskeasy.graphqlserviceapp.service.GraphQLService;
-import com.taskeasy.graphqlserviceapp.service.GraphQLServiceImpl;
-import com.taskeasy.graphqlserviceapp.service.datafetcher.AllJokesDataFetcher;
-import com.taskeasy.graphqlserviceapp.service.datafetcher.JokeDataFetcher;
-import com.taskeasy.graphqlserviceapp.service.datafetcher.RandomJokeDataFetcher;
+import com.devbadger.graphqlapp.client.GatewayClient;
+import com.devbadger.graphqlapp.datafetcher.AllJokesDataFetcher;
+import com.devbadger.graphqlapp.datafetcher.JokeDataFetcher;
+import com.devbadger.graphqlapp.datafetcher.RandomJokeDataFetcher;
+import com.devbadger.graphqlapp.service.GatewayService;
+import com.devbadger.graphqlapp.service.GatewayServiceImpl;
+import com.devbadger.graphqlapp.service.GraphQLService;
+import com.devbadger.graphqlapp.service.GraphQLServiceImpl;
 import model.ServiceObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
