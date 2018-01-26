@@ -47,6 +47,11 @@ public class IcndbController {
         }
     }
 
+    @RequestMapping("jokes")
+    public ResponseEntity<Collection<Joke>> getAllJokes() {
+        return ResponseEntity.ok(icndbService.getAllJokes());
+    }
+
     @RequestMapping("jokes/random/{count}")
     public ResponseEntity<Collection<Joke>> getRandomJokes(
             @PathVariable("count") final Integer count

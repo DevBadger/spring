@@ -1,4 +1,4 @@
-server.port: 13553
+server.port: 13554
 
 spring:
   application.name: graphql-service

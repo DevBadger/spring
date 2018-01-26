@@ -45,7 +45,7 @@ configurations {
 
 dependencies {
 	compile project(':service-common')
-//	compile ('com.devbadger.gateway:gateway-icndb-model:SNAPSHOT-1.0.0')
+//	compile ('com.devbadger:gateway-icndb-model:SNAPSHOT-1.0.0')
 
 	compile('com.google.guava:guava:23.0')
 	compile('io.github.openfeign:feign-jackson:9.3.1')

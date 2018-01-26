@@ -48,7 +48,7 @@ configurations {
 
 dependencies {
 	compile project(':gateway-icndb-service')
-	compile('com.devbadger:gateway-icndb-model:1.0.0-SNAPSHOT')
+	compile project(':gateway-icndb-model')
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.springframework.boot:spring-boot-starter-web-services'
 	compile "org.springframework.boot:spring-boot-starter-tomcat"

@@ -52,4 +52,10 @@ public class IcndbServiceImpl implements IcndbService {
         MultiJokeResponse jokeResponse = icndbFeignClient.getRandomJokes(count);
         return jokeResponse.getValue();
     }
+
+    @Override
+    public Collection<Joke> getAllJokes() {
+        MultiJokeResponse jokeResponse = icndbFeignClient.getAllJokes();
+        return jokeResponse.getValue();
+    }
 }

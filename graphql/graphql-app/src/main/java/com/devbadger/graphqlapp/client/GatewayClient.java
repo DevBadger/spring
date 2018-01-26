@@ -12,21 +12,21 @@ import java.util.Collection;
  */
 @FeignClient(name="gateway", configuration = GatewayClientConfig.class)
 public interface GatewayClient {
-    @RequestMapping("/rest/icndb/jokes/{id}")
+    @RequestMapping("/icndb/api/v1/jokes/{id}")
     Joke getJoke(@RequestParam("id") final Integer id);
 
-    @RequestMapping("/rest/icndb/jokes/random")
+    @RequestMapping("/icndb/api/v1/jokes/random")
     Joke getRandomJoke();
 
-    @RequestMapping("/rest/icndb/jokes/random/{count}")
+    @RequestMapping("/icndb/api/v1/jokes/random/{count}")
     Collection<Joke> getRandomJokes(@RequestParam("count") final Integer count);
 
-    @RequestMapping("/rest/icndb/categories")
+    @RequestMapping("/icndb/api/v1/categories")
     Collection<String> getCategories();
 
     @RequestMapping("/rest/icndb/jokes/count")
     Integer getJokeCount();
 
-    @RequestMapping("/rest/icndb/jokes")
+    @RequestMapping("/icndb/api/v1jokes")
     Collection<Joke> getAllJokes();
 }

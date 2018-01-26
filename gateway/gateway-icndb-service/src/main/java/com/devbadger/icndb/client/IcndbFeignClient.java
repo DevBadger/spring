@@ -37,6 +37,12 @@ public interface IcndbFeignClient {
     );
 
     /**
+     * @return MultiJokeResponse
+     */
+    @GetMapping("/jokes")
+    MultiJokeResponse getAllJokes();
+
+    /**
      * @return available joke categories as Collection of Strings
      */
     @GetMapping("/categories")
