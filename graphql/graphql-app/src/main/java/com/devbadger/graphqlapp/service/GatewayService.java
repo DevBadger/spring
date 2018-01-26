@@ -9,7 +9,7 @@ import java.util.Optional;
  * Created by Badger on 1/15/18.
  */
 public interface GatewayService {
-    Optional<Joke> getJoke(Integer id);
+    Joke getJokeById(Integer id);
     Joke getRandomJoke();
     Collection<Joke> getRandomJokes(Integer count);
     Collection<Joke> getAllJokes();

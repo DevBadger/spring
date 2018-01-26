@@ -3,13 +3,13 @@ schema {
 }
 
 type Joke {
-    id: Long
+    id: Integer
     joke: String
     categories: [String]
 }
 
 type Query {
     allJokes: [Joke]
-    joke(id: Long): Joke
+    jokeById(id: Int!): Joke
     randomJoke: Joke
 }

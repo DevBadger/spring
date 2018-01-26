@@ -1,7 +1,7 @@
 package com.devbadger.graphqlapp.service;
 
 import com.devbadger.graphqlapp.datafetcher.AllJokesDataFetcher;
-import com.devbadger.graphqlapp.datafetcher.JokeDataFetcher;
+import com.devbadger.graphqlapp.datafetcher.JokeByIdDataFetcher;
 import com.devbadger.graphqlapp.datafetcher.RandomJokeDataFetcher;
 import graphql.GraphQL;
 import graphql.schema.GraphQLSchema;
@@ -22,14 +22,14 @@ import java.io.IOException;
 public class GraphQLServiceImpl implements GraphQLService{
     @Value("classpath:joke.graphql") Resource resource;
     private AllJokesDataFetcher allJokesDataFetcher;
-    private JokeDataFetcher jokeDataFetcher;
+    private JokeByIdDataFetcher jokeByIdDataFetcher;
     private RandomJokeDataFetcher randomJokeDataFetcher;
     private GraphQL graphQL;
 
     @Autowired
-    public GraphQLServiceImpl(AllJokesDataFetcher allJokesDataFetcher, JokeDataFetcher jokeDataFetcher, RandomJokeDataFetcher randomJokeDataFetcher) {
+    public GraphQLServiceImpl(AllJokesDataFetcher allJokesDataFetcher, JokeByIdDataFetcher jokeByIdDataFetcher, RandomJokeDataFetcher randomJokeDataFetcher) {
         this.allJokesDataFetcher = allJokesDataFetcher;
-        this.jokeDataFetcher = jokeDataFetcher;
+        this.jokeByIdDataFetcher = jokeByIdDataFetcher;
         this.randomJokeDataFetcher = randomJokeDataFetcher;
     }
 
@@ -47,7 +47,7 @@ public class GraphQLServiceImpl implements GraphQLService{
         return RuntimeWiring.newRuntimeWiring()
                 .type("Query", typeWiring -> typeWiring
                         .dataFetcher("allJokes", allJokesDataFetcher)
-                        .dataFetcher("joke", jokeDataFetcher)
+                        .dataFetcher("jokeById", jokeByIdDataFetcher)
                         .dataFetcher("randomJoke", randomJokeDataFetcher)
                 )
                 .build();

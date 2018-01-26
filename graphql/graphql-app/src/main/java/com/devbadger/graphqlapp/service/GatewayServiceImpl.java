@@ -5,7 +5,6 @@ import model.Joke;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
-import java.util.Optional;
 
 /**
  * Created by Badger on 1/15/18.
@@ -19,8 +18,8 @@ public class GatewayServiceImpl implements GatewayService{
     }
 
     @Override
-    public Optional<Joke> getJoke(Integer id) {
-        return Optional.of(gatewayClient.getJoke(id));
+    public Joke getJokeById(Integer id) {
+        return gatewayClient.getJokeById(id);
     }
 
     @Override

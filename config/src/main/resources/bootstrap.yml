@@ -9,9 +9,8 @@ spring:
     searchPaths:
       - 'gateway'
       - 'service'
-      - 'security'
-      - 'zuul'
       - 'graphql'
+      - 'zuul'
 
 eureka:
   client:

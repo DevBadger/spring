@@ -13,7 +13,7 @@ import java.util.Collection;
 @FeignClient(name="gateway", configuration = GatewayClientConfig.class)
 public interface GatewayClient {
     @RequestMapping("/icndb/api/v1/jokes/{id}")
-    Joke getJoke(@RequestParam("id") final Integer id);
+    Joke getJokeById(@RequestParam("id") final Integer id);
 
     @RequestMapping("/icndb/api/v1/jokes/random")
     Joke getRandomJoke();

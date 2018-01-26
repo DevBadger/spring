@@ -12,6 +12,7 @@ public interface GatewayService {
     Optional<Joke> getJoke(Integer id);
     Optional<Joke> getRandomJoke();
     Collection<Joke> getRandomJokes(Integer count);
+    Collection<Joke> getAllJokes();
     Collection<String> getCategories();
     Integer getJokeCount();
 }

@@ -57,6 +57,12 @@ public class JokeController {
         return ResponseEntity.ok(jokes);
     }
 
+    @RequestMapping("jokes")
+    public ResponseEntity<Collection<Joke>> getAllJokes() {
+        Collection<Joke> jokes = gatewayService.getAllJokes();
+        return ResponseEntity.ok(jokes);
+    }
+
     @RequestMapping("jokes/count")
     public ResponseEntity<Integer> getJokeCount(){
         Integer count = gatewayService.getJokeCount();

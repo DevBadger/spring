@@ -32,6 +32,11 @@ public class GatewayServiceImpl implements GatewayService{
     }
 
     @Override
+    public Collection<Joke> getAllJokes() {
+        return gatewayClient.getAllJokes();
+    }
+
+    @Override
     public Collection<String> getCategories() {
         return gatewayClient.getCategories();
     }

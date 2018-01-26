@@ -17,7 +17,7 @@ public class Joke extends Model {
         this.categories = builder.getCategories();
     }
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -29,22 +29,22 @@ public class Joke extends Model {
         return categories;
     }
 
-    private final long id;
+    private final Integer id;
     private final String joke;
     private final Collection<String> categories;
 
     public static class Builder {
-        private long id;
+        private Integer id;
         private String joke;
         private Collection<String> categories;
 
-        public long getId() {
+        public Integer getId() {
             return id;
         }
         public String getJoke() { return joke; }
         public Collection<String> getCategories() { return categories; }
 
-        public Builder setId(long id) {
+        public Builder setId(Integer id) {
             this.id = id;
             return this;
         }
