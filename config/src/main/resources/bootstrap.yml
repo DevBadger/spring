@@ -11,11 +11,11 @@ spring:
       - 'service'
       - 'security'
       - 'zuul'
-      - 'gtep-small'
+      - 'graphql'
 
 eureka:
   client:
-    service-url.defaultZone: http://localhost:11557/eureka/
+    service-url.defaultZone: http://localhost:11550/eureka/
     register-with-eureka: true
     fetch-registry: false
   instance:

@@ -15,7 +15,7 @@ import java.util.UUID;
 @RestController
 @EnableZuulProxy
 @EnableEurekaClient
-public class ZuulApplication {
+public class ZuulApp {
 
 	@RequestMapping("/resource")
 	public Map<String,Object> home() {
@@ -26,6 +26,6 @@ public class ZuulApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(ZuulApplication.class, args);
+		SpringApplication.run(ZuulApp.class, args);
 	}
 }

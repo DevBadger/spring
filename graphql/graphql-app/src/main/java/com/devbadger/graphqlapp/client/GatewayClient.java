@@ -24,9 +24,9 @@ public interface GatewayClient {
     @RequestMapping("/icndb/api/v1/categories")
     Collection<String> getCategories();
 
-    @RequestMapping("/rest/icndb/jokes/count")
+    @RequestMapping("icndb/api/v1/jokes/count")
     Integer getJokeCount();
 
-    @RequestMapping("/icndb/api/v1jokes")
+    @RequestMapping("/icndb/api/v1/jokes")
     Collection<Joke> getAllJokes();
 }
