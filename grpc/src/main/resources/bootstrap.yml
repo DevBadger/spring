@@ -1,0 +1,3 @@
+spring:
+  application.name: grpc
+  cloud.config.uri: http://localhost:11551/
