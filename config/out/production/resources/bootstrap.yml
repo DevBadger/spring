@@ -8,8 +8,9 @@ spring:
     uri: https://github.com/DevBadger/config-properties.git
     searchPaths:
       - 'gateway'
-      - 'service'
       - 'graphql'
+      - 'grpc'
+      - 'service'
       - 'zuul'
 
 eureka:

@@ -35,6 +35,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/graphql-intg.iml" filepath="$PROJECT_DIR$/.idea/modules/graphql-intg.iml" group="graphql-intg" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/graphql-intg/graphql-intg_main.iml" filepath="$PROJECT_DIR$/.idea/modules/graphql-intg/graphql-intg_main.iml" group="graphql-intg" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/graphql-intg/graphql-intg_test.iml" filepath="$PROJECT_DIR$/.idea/modules/graphql-intg/graphql-intg_test.iml" group="graphql-intg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/grpc.iml" filepath="$PROJECT_DIR$/.idea/modules/grpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/grpc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/grpc_main.iml" group="grpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/grpc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/grpc_test.iml" group="grpc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service.iml" filepath="$PROJECT_DIR$/.idea/modules/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-app/service-app.iml" filepath="$PROJECT_DIR$/.idea/modules/service-app/service-app.iml" group="service-app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-app/service-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-app/service-app_main.iml" group="service-app" />
